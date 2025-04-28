@@ -9,7 +9,7 @@ public class Count_no_In_Num {
 			
 		}else if(num==0){
 			num=1;//test
-		}
+		}//123
 		while(num>0) {
 			num = num/10;
 			a++;
