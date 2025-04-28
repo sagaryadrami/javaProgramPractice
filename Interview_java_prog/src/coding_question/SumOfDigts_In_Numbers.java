@@ -5,7 +5,7 @@ public class SumOfDigts_In_Numbers {
 	public static void main(String[] args) {
 		int n = 222;
 		System.out.println(sumOfNumber(n));
-		
+		//test
 	}
 	
 	public static  int sumOfNumber(int num) {
