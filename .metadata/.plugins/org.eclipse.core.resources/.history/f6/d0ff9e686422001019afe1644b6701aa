@@ -1,0 +1,33 @@
+package org.selenium.testcase;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class MyFirstTestCase {
+	
+	@Test
+	public void guestCheckoutUsingDirectBankTransfer() throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://askomdch.com/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//li[@id='menu-item-1227']")).click();
+		driver.findElement(By.id("woocommerce-product-search-field-0")).sendKeys("blue");
+		driver.findElement(By.cssSelector("button[value='Search']")).click();
+		Assert.assertEquals(
+				driver.findElement(By.cssSelector("h1[class='woocommerce-products-header__title page-title']")).getText(), "Search results: “blue”");
+	driver.findElement(By.cssSelector("a[href='?add-to-cart=1215']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.cssSelector("a[class=\"added_to_cart wc-forward\"]")).click();
+	Assert.assertEquals(driver.findElement(By.cssSelector("td[class='product-name'] a")).getText(), "Blue Shoes");
+	//driver.findElement(By.cssSelector("checkout-button")).click();	
+		
+		
+		
+		
+	}
+
+}
