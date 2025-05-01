@@ -12,5 +12,5 @@ public class SwappingOfNumber {
 		a=a-b;//15-10->5
 		System.out.println("after swapping a = "+a+" after swapping b = "+b);
 	}
-
+//test
 }
