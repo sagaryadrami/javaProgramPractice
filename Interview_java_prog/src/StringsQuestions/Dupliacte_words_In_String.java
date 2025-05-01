@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Dupliacte_words_In_String {
 
 	public static void main(String[] args) {
-		String sentense="sagar is learns string problems";
+		String sentense="sagar";
 		duplicateWordInAString(sentense);
 	}
 	
